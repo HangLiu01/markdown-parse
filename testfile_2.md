@@ -1,1 +1,1 @@
-[amazon](https://www.amazon.com)
+[google](https://www.google.com) 
