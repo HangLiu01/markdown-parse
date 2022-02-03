@@ -17,7 +17,7 @@ public class MarkdownParseTestW5 {
         String test_file = Files.readString(Path.of("test-file.md"));
         assertEquals(
             "getLinks() should get all links in a valid file",
-            List.of("https://something.comeeeee", "some-page.html"),
+            List.of("https://something.com", "some-page.html"),
             MarkdownParseW5.getLinks(test_file)
         );
     }
