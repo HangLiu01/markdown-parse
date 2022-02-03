@@ -1,5 +1,4 @@
 import static org.junit.Assert.*;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -7,7 +6,7 @@ import java.util.List;
 
 import org.junit.*;
 
-public class MarkdownParseTest {
+public class MarkdownParseTestW5 {
     @Test
     public void addition() {
         assertEquals(2, 1 + 1);
@@ -19,7 +18,7 @@ public class MarkdownParseTest {
         assertEquals(
             "getLinks() should get all links in a valid file",
             List.of("https://something.com", "some-page.html"),
-            MarkdownParse.getLinks(test_file)
+            MarkdownParseW5.getLinks(test_file)
         );
     }
 
@@ -31,7 +30,7 @@ public class MarkdownParseTest {
             List.of(
                 "https:/https://ucsd-cse15l-w22.github.io/week/week3"
             ),
-            MarkdownParse.getLinks(breaking_test)
+            MarkdownParseW5.getLinks(breaking_test)
         );
     }
     @Test
@@ -42,7 +41,7 @@ public class MarkdownParseTest {
             "getLinks() should find no links in an invalid file " +
             "(missing opening square bracket)",
             List.of(),
-            MarkdownParse.getLinks(breaking_test_2)
+            MarkdownParseW5.getLinks(breaking_test_2)
         );
     }
     @Test
@@ -53,7 +52,7 @@ public class MarkdownParseTest {
             "getLinks() should find no link in an invalid file " +
             "(missing closing parenthesis)",
             List.of(),
-            MarkdownParse.getLinks(breaking_test_3)
+            MarkdownParseW5.getLinks(breaking_test_3)
         );
     }
 
@@ -67,7 +66,7 @@ public class MarkdownParseTest {
         assertEquals(
             "Validate MarkdownParse on test-file2.md",
             List.of("https://something.com", "some-page.html"),
-            MarkdownParse.getLinks(str)
+            MarkdownParseW5.getLinks(str)
         );
     }
     @Test
@@ -77,7 +76,7 @@ public class MarkdownParseTest {
         assertEquals(
             "Validate MarkdownParse on test-file3.md",
             List.of(),
-            MarkdownParse.getLinks(str)
+            MarkdownParseW5.getLinks(str)
         );
     }
     @Test
@@ -87,7 +86,7 @@ public class MarkdownParseTest {
         assertEquals(
             "Validate MarkdownParse on test-file4.md",
             List.of(),
-            MarkdownParse.getLinks(str)
+            MarkdownParseW5.getLinks(str)
         );
     }
     @Test
@@ -97,7 +96,7 @@ public class MarkdownParseTest {
         assertEquals(
             "Validate MarkdownParse on test-file5.md",
             List.of(),
-            MarkdownParse.getLinks(str)
+            MarkdownParseW5.getLinks(str)
         );
     }
     @Test
@@ -107,7 +106,7 @@ public class MarkdownParseTest {
         assertEquals(
             "Validate MarkdownParse on test-file6.md",
             List.of(),
-            MarkdownParse.getLinks(str)
+            MarkdownParseW5.getLinks(str)
         );
     }
     @Test
@@ -117,7 +116,7 @@ public class MarkdownParseTest {
         assertEquals(
             "Validate MarkdownParse on test-file7.md",
             List.of(),
-            MarkdownParse.getLinks(str)
+            MarkdownParseW5.getLinks(str)
         );
     }
     @Test
@@ -127,7 +126,7 @@ public class MarkdownParseTest {
         assertEquals(
             "Validate MarkdownParse on test-file8.md",
             List.of(),
-            MarkdownParse.getLinks(str)
+            MarkdownParseW5.getLinks(str)
         );
     }
 }
