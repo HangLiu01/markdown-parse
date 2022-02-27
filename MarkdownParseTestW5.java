@@ -129,4 +129,38 @@ public class MarkdownParseTestW5 {
             MarkdownParseW5.getLinks(str)
         );
     }
+
+    /*
+    @Test
+    public void testGetLinks_snippet1() throws IOException {
+        String str = 
+            Files.readString(Path.of("snippet1.md"));
+        assertEquals(
+            "Validate MarkdownParse on snippet1.md", 
+            List.of("`google.com", "google.com", "ucsd.edu"),
+            MarkdownParseW5.getLinks(str)
+        );
+    }
+
+    @Test
+    public void testGetLinks_snippet2() throws IOException {
+        String str = 
+            Files.readString(Path.of("snippet2.md"));
+        assertEquals(
+            "Validate MarkdownParse on snippet2.md", 
+            List.of("a.com", "a.com(())", "example.com"),
+            MarkdownParseW5.getLinks(str)
+        );
+    }*/
+
+    @Test
+    public void testGetLinks_snippet3() throws IOException {
+        String str = 
+            Files.readString(Path.of("snippet3.md"));
+        assertEquals(
+            "Validate MarkdownParse on snippet3.md", 
+            List.of("https://ucsd-cse15l-w22.github.io/"),
+            MarkdownParseW5.getLinks(str)
+        );
+    }
 }
