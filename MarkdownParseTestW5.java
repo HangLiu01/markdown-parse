@@ -151,7 +151,7 @@ public class MarkdownParseTestW5 {
             List.of("a.com", "a.com(())", "example.com"),
             MarkdownParseW5.getLinks(str)
         );
-    }*/
+    }
 
     @Test
     public void testGetLinks_snippet3() throws IOException {
@@ -162,5 +162,5 @@ public class MarkdownParseTestW5 {
             List.of("https://ucsd-cse15l-w22.github.io/"),
             MarkdownParseW5.getLinks(str)
         );
-    }
+    }*/
 }
